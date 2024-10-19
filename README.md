@@ -1,7 +1,7 @@
 # CuPy and NumPy Implemention of ResNet-9
 
 ## 1. Architecture
-<div align=center><img src="assets/arch.png" height="100%" width="90%"/></div>
+<div align=left><img src="assets/arch.png" height="100%" width="95%"/></div>
 
 ## 2. Implementing Optimization (Cupy)
 ### 2.1 Convolution
@@ -31,9 +31,7 @@ learning_rate | 1e-3
 
 1. Update m, v in each iteration:
 
-   $${m}_t = {\beta}_1 m_{t-1} + (1-\beta_1)g_t$$
-   
-   $${v}_t = {\beta}_2 v_{t-1} + (1-\beta_2){g_t}^2$$
+   $$m_t = \beta_1 m_{t-1} + (1-\beta_1)g_t$$ &nbsp;&nbsp;&nbsp;&nbsp; $$v_t = \beta_2 v_{t-1} + (1-\beta_2){g_t}^2$$
 
    ```Python
    # Initialize m and v
@@ -63,14 +61,7 @@ learning_rate | 1e-3
    ```
 
 ### 3.2 Training Loss
-Official PyTorch
-Ours (SGD)
-[Image]
-[Image]
-Ours (Adam)
-Comparision
-[Image]
-[Image]
+<div align=left><img src="assets/loss.png" height="100%" width="95%"/></div>
 
 ## 4. Performance Results
 ### 4.1 Accuracy
@@ -84,7 +75,7 @@ Our CuPy Implementation (Adam) | 99.65 | 99.43
 
 #### 4.1.2 Ablation Study
 
-<div align=left><img src="assets/ablation.png" height="100%" width="90%"/></div>
+<div align=left><img src="assets/ablation.png" height="100%" width="96%"/></div>
 
 It is observed that modifications to the residual module did not lead to significant improvements in the results. However, replacing the max pooling layer before the FC layer with a global average pooling layer yielded a more noticeable improvement. Additionally, using the Adam optimizer, compared to a simple SGD, also brought a considerable enhancement.
 
