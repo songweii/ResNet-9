@@ -1,7 +1,7 @@
 # CuPy and NumPy Implemention of ResNet-9
 
 ## 1. Architecture
-<div align=center><img src="assets/arch.pdf" height="100%" width="90%"/></div>
+<div align=center><img src="assets/arch.png" height="100%" width="90%"/></div>
 
 ## 2. Implementing Optimization (Cupy)
 ### 2.1 Convolution
@@ -85,7 +85,7 @@ Our CuPy Implementation (Adam) | 99.65 | 99.43
 #### 4.1.2 Ablation Study
 It is observed that modifications to the residual module did not lead to significant improvements in the results. However, replacing the max pooling layer before the FC layer with a global average pooling layer yielded a more noticeable improvement. Additionally, using the Adam optimizer, compared to a simple SGD, also brought a considerable enhancement.
 
-<div align=center><img src="assets/acrh.pdf" height="100%" width="90%"/></div>
+<div align=center><img src="assets/acrh.png" height="100%" width="90%"/></div>
 
 | | Network Architecture (Optimizer) | Test-set Acc.
 | :----: | :----: | :----: |
