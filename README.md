@@ -61,7 +61,7 @@ learning_rate | 1e-3
    ```
 
 ### 3.2 Training Loss
-<div align=left><img src="assets/loss.png" height="100%" width="95%"/></div>
+<div align=left><img src="assets/loss_accuracy_curve.png" height="100%" width="95%"/></div>
 
 ## 4. Performance Results
 ### 4.1 Accuracy
