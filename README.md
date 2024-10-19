@@ -15,7 +15,12 @@ In Cupy implementation, we use the as_strided method to create a view of the inp
 
 ## 3. Training
 ```train
+python ResNet9-Cupy-convres-2-maxpool/train.py
+python ResNet9-Cupy-convres-3-maxpool/train.py
+python ResNet9-Cupy-directres-2-avgpool/train.py
 python ResNet9-Cupy-directres-2-maxpool/train.py
+python ResNet9-Cupy-directres-2-maxpool-adam/train.py
+python ResNet9-numpy/train.py
 ```
 
 **Optimizer:** We implemented ResNet9 [1] with two kinds of optimizer, SGD and Adam [2].
