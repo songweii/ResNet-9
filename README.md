@@ -1,7 +1,7 @@
 # CuPy and NumPy Implemention of ResNet-9
 
 ## 1. Architecture
-
+<div align=center><img src="assets/acrh.png" height="100%" width="90%"/></div>
 
 ## 2. Implementing Optimization (Cupy)
 ### 2.1 Convolution
