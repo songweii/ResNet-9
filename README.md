@@ -27,14 +27,9 @@ python ResNet9-Numpy/train.py
 **Training Set:** MNIST-train (60,000 images) [3]
 **Test Set:** MNIST-test (10,000 images)
 
-Hyperparameter | Value
-| :----: | :----: |
-epoch | 8
-batch_size | 8
-stride | 1
-dilate | 1
-learning_rate | 1e-3
-(beta1, beta2) | (0.9, 0.999)
+Hyperparameter | epoch | batch_size | stride | dilate | learning_rate | (beta1, beta2)
+| :----: | :----: |:----: | :----: |:----: | :----: |:----: |
+Value | 8 | 8 | 1 | 1 | 1e-3 | (0.9, 0.999)
 
 ### 3.1 Implementation of the Adam Optimizer:
 
