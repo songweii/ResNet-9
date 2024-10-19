@@ -14,6 +14,10 @@ In Numpy implementation, max pooling also uses nested loops to extract patches f
 In Cupy implementation, we use the as_strided method to create a view of the input tensor, eliminating the need for nested loops in the convolution and pooling process. Though theoritical time complexity is remains the same, it significantly improves computational efficiency because of applying Cupy's parallelism.
 
 ## 3. Training
+```train
+python train.py
+```
+
 **Optimizer:** We implemented ResNet9 [1] with two kinds of optimizer, SGD and Adam [2].
 **Training Set:** MNIST-train (60,000 images) [3]
 **Test Set:** MNIST-test (10,000 images)
