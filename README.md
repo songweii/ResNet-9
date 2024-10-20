@@ -11,7 +11,7 @@ The NumPy implementation iteratively extracts patches from the input tensor, per
 ### 2.2 Max Pooling
 Suppose the shape of the input tensor is $(N, C, H, W)$, and the shape of the pooling kernel is $(K, K)$, strid is $S$, so the shape of the output tensor is $(N, C, H', W')$. The time complexity is $O(N \cdot C \cdot H' \cdot W' \cdot K^2)$.
 In Numpy implementation, max pooling also uses nested loops to extract patches from the input tensor, and find the min and max values for each patch, which is also not efficient.
-In Cupy implementation, we use the as_strided method to create a view of the input tensor, eliminating the need for nested loops in the convolution and pooling process. Though theoritical time complexity is remains the same, it significantly improves computational efficiency because of applying Cupy's parallelism.
+In Cupy implementation, we use the `as_strided` method to create a view of the input tensor, eliminating the need for nested loops in the convolution and pooling process. Though theoritical time complexity is remains the same, it significantly improves computational efficiency because of applying Cupy's parallelism.
 
 ## 3. Training
 ```train
