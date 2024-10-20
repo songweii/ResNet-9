@@ -5,11 +5,11 @@
 
 ## 2. Implementing Optimization (Cupy)
 ### 2.1 Convolution
-Suppose the shape of the input tensor is $(N, C_{\text{in}}, H, W)$, and the shape of the kernel is $$(C_{\text{out}}, C_{\text{in}}, K, K)$$, strid is $$S$$, so the shape of the output is $$(N, C_{\text{out}}, H', W')$$. The time complexity is $$O(N \cdot C_{\text{out}} \cdot H' \cdot W' \cdot C_{\text{in}} \cdot K^2)$$.
+Suppose the shape of the input tensor is $(N, C_{\text{in}}, H, W)$, and the shape of the kernel is $(C_{\text{out}}, C_{\text{in}}, K, K)$, strid is $S$, so the shape of the output is $(N, C_{\text{out}}, H', W')$. The time complexity is $O(N \cdot C_{\text{out}} \cdot H' \cdot W' \cdot C_{\text{in}} \cdot K^2)$.
 The NumPy implementation iteratively extracts patches from the input tensor, performs element-wise multiplication with the convolution kernel for each patch, and then sums the results.
 
 ### 2.2 Max Pooling
-Suppose the shape of the input tensor is $$(N, C, H, W)$$, and the shape of the pooling kernel is $$(K, K)$$, strid is $$S$$, so the shape of the output tensor is $$(N, C, H', W')$$. The time complexity is $$O(N \cdot C \cdot H' \cdot W' \cdot K^2)$$.
+Suppose the shape of the input tensor is $(N, C, H, W)$, and the shape of the pooling kernel is $(K, K)$, strid is $S$, so the shape of the output tensor is $(N, C, H', W')$. The time complexity is $O(N \cdot C \cdot H' \cdot W' \cdot K^2)$.
 In Numpy implementation, max pooling also uses nested loops to extract patches from the input tensor, and find the min and max values for each patch, which is also not efficient.
 In Cupy implementation, we use the as_strided method to create a view of the input tensor, eliminating the need for nested loops in the convolution and pooling process. Though theoritical time complexity is remains the same, it significantly improves computational efficiency because of applying Cupy's parallelism.
 
